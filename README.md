@@ -1,6 +1,6 @@
 # PHP Version Manager
 
-Quick and Simple bash script allowing to switch easily between installed PHP versions.
+Quick and Simple bash script allowing to switch easily between installed PHP versions (Via apt-repository ondrej/php).
 
 Designed for Linux Dieban's based distributions working with apt, php and Apache2
 
@@ -13,20 +13,8 @@ Designed for Linux Dieban's based distributions working with apt, php and Apache
 # Usage :
 
 ```bash
-./pvm.sh
+sudo ./pvm.sh
 ```
-
-# What's next ? :
-
-When i'll have some spare time i plan on adding some extra features like :
-
-1. Allowing install && removal of PHP Versions directly via pvm using apt && ondrej repository
-
-2. Allowing install && removal of PHP-libraries directly for the current version through the pvm
-
-3. Create an auto-setup for pvm in order to access it directly as a system command
-
-4. Rewrite it using another language (not sure tho)
 
 Feel free to contact me at <alexandre.choisy@arengi.fr>
 
