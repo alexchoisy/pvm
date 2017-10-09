@@ -7,6 +7,7 @@ if [ $UID != $ROOT_UID ]; then
 	exit 1
 fi
 
+echo "Modified"
 echo "Welcome to Php Version Manager (PVM)"
 echo "Installed Php versions : "
 
@@ -14,7 +15,7 @@ CPT=0
 
 CURRENT_VERSION=$(php -r "echo floor(PHP_VERSION_ID/10000).'.'.intval(substr(''.PHP_VERSION_ID, -4, 2)).'.'.intval(substr(''.PHP_VERSION_ID, -2));")
 
-for PHP_COMMAND in $(ls -1 /usr/bin/ | grep "^php[0-9]")
+for PHP_COMMAND in $(ls -1 /usr/bin/ | grep -E "^php[0-9\.]+$")
 do
 	PHP_VERSION=$(eval "$PHP_COMMAND -r \"echo floor(PHP_VERSION_ID/10000).'.'.intval(substr(''.PHP_VERSION_ID, -4, 2)).'.'.intval(substr(''.PHP_VERSION_ID, -2));\"")
 	if [ $PHP_VERSION == $CURRENT_VERSION ]; then
